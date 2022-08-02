@@ -16,7 +16,7 @@ async function filmsFromLocalStorage()
     for(let i=0; i<filmsID.length; i++)
     {
         let id = filmsID[i]
-        const res = await  fetch(`http://www.omdbapi.com/?apikey=69005b96&i=${id}`)
+        const res = await  fetch(`https://www.omdbapi.com/?apikey=69005b96&i=${id}`)
         const data = await res.json()
         updateFilm(data)
         removeFromWatchlist()
