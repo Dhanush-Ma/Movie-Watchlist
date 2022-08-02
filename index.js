@@ -24,7 +24,7 @@ async function search()
     const userTitle = inputEl.value
     if(userTitle)
     {
-        const res = await fetch(`http://www.omdbapi.com/?apikey=69005b96&s=${userTitle}`)
+        const res = await fetch(`https://www.omdbapi.com/?apikey=69005b96&s=${userTitle}`)
         const data = await res.json()
                 console.log(data)
                 document.getElementById("film-list").innerHTML = ""
@@ -38,7 +38,7 @@ async function search()
                     for(let i=0; i<filmsID.length; i++)
                     {
                         let id = filmsID[i]
-                        const res =await fetch(`http://www.omdbapi.com/?apikey=69005b96&i=${id}`)
+                        const res =await fetch(`https://www.omdbapi.com/?apikey=69005b96&i=${id}`)
                         const data = await res.json()
                         updateFilm(data)
                         watchlist(data)
